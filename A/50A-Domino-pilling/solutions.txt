@@ -1,0 +1,16 @@
+so when thinking about it is like the theatre square where you have a rectangle and you want to fill it with square
+but the difference here that the deminsion of the peice we want to fill with is not 1 it is 2 to 1 and we can fill it in any 
+diraction and it we don't want to fill it fully and has a peice outside of the rectangle
+
+so i solve it by looking at the bigger edge of the rectangle and in my cause N 
+then i calculate the largest number of peice i can fit / which mean divide N on A 
+and the result is either 0 or the rest of the division which will be called Rest_of_N
+
+then we do the same for the height M 
+we divide M on the B and then get the Rest_of_M
+
+then we see how many peice i can fit in the Rest_of_N by dividing it on M like the previous 
+
+
+you can use the formula 
+(N/A) * (M/B) to get how many small rectangle can fit in the largest rectangle

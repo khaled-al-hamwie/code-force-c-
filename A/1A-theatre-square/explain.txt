@@ -1,0 +1,23 @@
+please note that the mod of a number smaller than the other like 4%5 will equall the same number 4
+i use the mod there as a way to make the size of the rectangle dividable on the size of the square so i could
+find a way or a limit to calculate the count of the square
+
+the second way of thinking is to count starting from the width and for each cycle we will count each row and mines each
+one by the length of that square untill the width is < 0 i didn't but it <= 0 because in that cause i will get extra square
+if width is 4 and the square is 2 then the number of square in the row will be 3 because for each iteration ->4 2 0 -2
+
+the question is like if i have a width let say 5 how many peice i can devide or put in it if the peice length is 1
+let 's say 5 /1 is 5 so i can fit 5 peices in the widht but what if the peice is 2 then i can fit 2.5 and as we know in the
+question we can't fit half a square so we could add a half so it become 3
+
+knowing that we can divde the width on the square width and the height on the height of the square and take the ceil of each value
+and then multipli it so we get the size of the square i can fit
+
+
+// for (int i = input[2]; i <= input[0] + input[0] % input[2]; i += input[2])
+// {
+//     for (int j = input[2]; j <= (input[1] + input[1] % input[2]); j += input[2])
+//     {
+//         count++;
+//     }
+// }
