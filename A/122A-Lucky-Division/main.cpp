@@ -1,24 +1,39 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    string n;
+    int n;
     std::cin >> n;
-    bool is_lucky = true;
-    for (int i = 0; i < n.length(); i++)
+    int arr[14] = {
+        4,
+        7,
+        47,
+        74,
+        44,
+        77,
+        444,
+        447,
+        474,
+        477,
+        777,
+        774,
+        747,
+        744,
+    };
+
+    bool is_lucky = false;
+    for (int i = 0; i < 14; i++)
     {
-        if (n[i] != '4' && n[i] != '7')
+        if (n % arr[i] == 0)
         {
-            is_lucky = false;
+            is_lucky = true;
             break;
         }
     }
-    std::cout << is_lucky;
-    int tem = stoi(n);
-    if (is_lucky || tem % 4 == 0 || tem % 7 == 0)
+
+    if (is_lucky)
         std::cout << "YES";
     else
         std::cout << "NO";
