@@ -19,20 +19,11 @@ int main(int argc, char const *argv[])
     }
     sort(a.begin(), a.end());
 
-    double redius;
+    double redius = max(abs(a.back() - l), abs(a.front()));
     for (int i = 0; i < a.size() - 1; i++)
     {
         double temp = abs(a[i + 1] - a[i]) / 2.0;
-        if (temp > redius)
-            redius = temp;
-    }
-    if (a.back() != l && abs(a.back() - l) > redius)
-    {
-        redius = abs(a.back() - l);
-    }
-    if (a.front() != 0 && abs(a.front()) > redius)
-    {
-        redius = abs(a.front());
+        redius = max(redius, temp);
     }
 
     std::cout << std::fixed
